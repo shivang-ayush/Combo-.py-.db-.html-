@@ -7,11 +7,13 @@ app = Flask(__name__)
 db = mysql.connector.connect(
     host="localhost",
     user="root",
-    password="yourpassword",
-    database="yourdbname"
+    password="OnePunchMan@1",
+    database="minedb"
 )
 
-@app.route('/form')
+
+# Make the form available at the root URL ('/')
+@app.route('/')
 def form():
     return render_template('form.html')
 
